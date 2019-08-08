@@ -1,0 +1,33 @@
+html{
+    margin: 0;
+    background: rgb(85, 85, 85);
+}
+
+body{
+    margin: 0;
+    background: rgb(247, 237, 101);
+}
+
+#container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0;
+}
+.colorBox{
+    
+    width: 5vw;
+    height: 5vw;
+    background-color: rgb(85, 85, 85);
+    transition: all 3s linear;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.active{
+    position: relative;
+    z-index: 5;
+    transform: scale(1.02) translate(5px, -5px);
+    transition: transform 0.3s ease-out;
+    box-shadow: -5px 5px 12px rgb(255, 255, 81);
+}
