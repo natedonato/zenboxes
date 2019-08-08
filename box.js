@@ -17,9 +17,12 @@ function giveRandomColor(){
 
 
 const container = document.getElementById("container");
+const header = document.getElementById("header");
+header.addEventListener('mouseenter', () => header.parentNode.removeChild(header));
+
 let square = document.createElement("div");
 square.setAttribute('class', 'colorBox');
-square.addEventListener('mouseenter', giveRandomColor);
+square.addEventListener('mouseover', giveRandomColor);
 square.addEventListener('click', giveRandomColor);
 
 
@@ -30,7 +33,7 @@ console.log(columns);
 for(let i = 0; i < columns; i++){
     for(let j = 0; j < 20; j++){
     const node = container.appendChild(square.cloneNode(true));
-    node.addEventListener('mouseenter', giveRandomColor);
+    node.addEventListener('mouseover', giveRandomColor);
     node.addEventListener('click', giveRandomColor);
     }
 }
