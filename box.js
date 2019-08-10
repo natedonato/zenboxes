@@ -17,6 +17,16 @@ function giveRandomColor(){
 
 
 const container = document.getElementById("container");
+
+container.addEventListener("touchmove", (e) => {
+  for (let i=0; i < e.changedTouches.length; i++) {
+		let x = e.changedTouches[i].pageX;
+		let y = e.changedTouches[i].pageY;
+     	let box = document.elementFromPoint(x, y);
+  		giveRandomColor.bind(box)();
+  }
+})
+
 const header = document.getElementById("header");
 header.addEventListener('mouseenter', () => header.parentNode.removeChild(header));
 
