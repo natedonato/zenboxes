@@ -19,6 +19,7 @@ function giveRandomColor(){
 const container = document.getElementById("container");
 
 container.addEventListener("touchmove", (e) => {
+   e.preventDefault();
   for (let i=0; i < e.changedTouches.length; i++) {
 		let x = e.changedTouches[i].pageX;
 		let y = e.changedTouches[i].pageY;
