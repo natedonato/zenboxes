@@ -23,11 +23,11 @@ container.addEventListener("touchmove", (e) => {
 		let x = e.changedTouches[i].pageX;
 		let y = e.changedTouches[i].pageY;
      	let box = document.elementFromPoint(x, y);
-     	if(box.id = "header"){
-     		header.parentNode.removeChild(header)
+     	if(box.id === "header"){
+     		box.parentNode.removeChild(box)
      	}else{
      		if(box.classList.contians("colorBox")){
-  				giveRandomColor.bind(box)();
+  		giveRandomColor.bind(box)();
      		}
      	}
   }
