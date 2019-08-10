@@ -39,7 +39,6 @@ square.addEventListener('click', giveRandomColor);
 let w = window.innerWidth;
 let h = window.innerHeight;
 let columns = h / (w / 20);
-console.log(columns);
 for(let i = 0; i < columns; i++){
     for(let j = 0; j < 20; j++){
     const node = container.appendChild(square.cloneNode(true));
