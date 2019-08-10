@@ -26,7 +26,7 @@ container.addEventListener("touchmove", (e) => {
      	if(box.id === "header"){
      		box.parentNode.removeChild(box)
      	}else{
-     		if(box.classList.contians("colorBox")){
+     		if(box.classList.contains("colorBox")){
   		giveRandomColor.bind(box)();
      		}
      	}
